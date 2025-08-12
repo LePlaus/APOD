@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 nasa_api = os.getenv("NASA_API_KEY")
-
+nasa_api = st.secrets['NASA_API_KEY']
 date = st.date_input("Enter the date:",max_value="today", min_value="2020-01-01")
 
 url = f"https://api.nasa.gov/planetary/apod?api_key={nasa_api}&date={date}"
